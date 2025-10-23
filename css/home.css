@@ -19,8 +19,12 @@ body {
   width: 0;
   height: 0;
   transform: translate(-50%, -50%);
+  filter: drop-shadow(0 0 20px rgba(226, 203, 110, 0.8))
+          drop-shadow(0 0 40px rgba(226, 203, 110, 0.4))
+          drop-shadow(0 0 60px rgba(226, 203, 110, 0.2));
 }
 
+/* Base triangles */
 .triforce-bg::before,
 .triforce-bg::after,
 .triforce-bg div {
@@ -30,7 +34,7 @@ body {
   height: 0;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
-  border-bottom: 86.6px solid rgba(226, 203, 110, 0.5); /* rich gold */
+  border-bottom: 86.6px solid rgba(226, 203, 110, 0.4);
 }
 
 /* Top triangle */
@@ -50,6 +54,7 @@ body {
   left: 0;
   top: 0;
 }
+
 
 header {
   background: linear-gradient(to bottom, #2f5e3a, #1e3c25);
@@ -94,7 +99,7 @@ main {
 
 .intro p {
   line-height: 1.6;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .btn {
@@ -120,5 +125,5 @@ footer {
   padding: 1rem;
   font-size: 0.9rem;
   color: #b9b38a;
-  position: relativ
+  position: relative
 }
