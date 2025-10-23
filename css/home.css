@@ -34,7 +34,6 @@ body {
   to { transform: translate(-50%, -50%) scale(1.1); opacity: 0.2; }
 }
 
-/* Header */
 header {
   background: linear-gradient(to bottom, #2f5e3a, #1e3c25);
   padding: 2rem;
