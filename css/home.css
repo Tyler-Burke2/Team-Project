@@ -16,9 +16,6 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 0;
-  height: 0;
-  transform: translate(-50%, -50%);
   filter: drop-shadow(0 0 20px rgba(226, 203, 110, 0.8))
           drop-shadow(0 0 40px rgba(226, 203, 110, 0.4))
           drop-shadow(0 0 60px rgba(226, 203, 110, 0.2));
@@ -54,7 +51,6 @@ body {
   left: 0;
   top: 0;
 }
-
 
 header {
   background: linear-gradient(to bottom, #2f5e3a, #1e3c25);
