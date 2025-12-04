@@ -5,34 +5,95 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Snowpeak Ruins Tutorial</title>
   <link rel="stylesheet" href="css/subpage.css">
-  <script src="js/subpage.js" defer></script>
+  <script src="js/subpage.js" type="module"></script>
 </head>
 <body>
   <header>
-    <h1>Snowpeak Ruins Tutorial</h1>
-    <p>Step-by-step guide for The Legend of Zelda: Twilight Princess</p>
-    <nav>
-        <a href="home.html" class="btn">Home</a>
+    <div class="header-content">
+      <h1>Snowpeak Ruins Tutorial</h1>
+      <p>Step-by-step guide for The Legend of Zelda: Twilight Princess</p>
+    </div>
+    
+    <!-- MOBILE DROP DOWN MENU -->
+    <nav class="main-nav">
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="subpage.html" class="active">Tutorial</a></li>
+        <li><a href="games.html">Games Database</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
+  
   <main>
-    <div class="tutorial-container">
-      <button class="nav-btn"><</button>
-      <div class="steps-wrapper">
-        <div class="step">Step 1:</div>
-        <div class="step">Step 2:</div>
-        <div class="step">Step 3:</div>
-        <div class="step">Step 4:</div>
-        <div class="step">Step 5:</div>
-        <div class="step">Step 6:</div>
-        <div class="step">Step 7:</div>
-        <div class="step">Step 8:</div>
-        <div class="step">Step 9:</div>
-        <div class="step">Step 10:</div>
+    <!-- COOL PROGRESS BAR -->
+    <div class="progress-container">
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
       </div>
-      <button class="nav-btn" id="nextBtn">></button>
+      <p class="progress-text">Step <span id="currentStepNum">1</span> of 10</p>
+    </div>
+    
+    <div class="tutorial-container">
+      <button class="nav-btn" id="prevBtn" aria-label="Previous step"><</button>
+      <div class="steps-wrapper">
+        <div class="step" data-step="1">
+          <h2>Step 1:</h2>
+          <p></p>
+        </div>
+        <div class="step" data-step="2">
+          <h2>Step 2:</h2>
+          <p></p>
+        </div>
+        <div class="step" data-step="3">
+          <h2>Step 3:</h2>
+          <p>
+          </p>
+        </div>
+        <div class="step" data-step="4">
+          <h2>Step 4:</h2>
+          <p></p>
+        </div>
+        <div class="step" data-step="5">
+          <h2>Step 5:</h2>
+          <p>
+          </p>
+        </div>
+        <div class="step" data-step="6">
+          <h2>Step 6:</h2>
+          <p></p>
+        </div>
+        <div class="step" data-step="7">
+          <h2>Step 7:</h2>
+          <p></p>
+        </div>
+        <div class="step" data-step="8">
+          <h2>Step 8:</h2>
+          <p></p>
+        </div>
+        <div class="step" data-step="9">
+          <h2>Step 9:</h2>
+          <p></p>
+        </div>
+        <div class="step" data-step="10">
+          <h2>Step 10:</h2>
+          <p></p>
+        </div>
+      </div>
+      <button class="nav-btn" id="nextBtn" aria-label="Next step">></button>
+    </div>
+    
+    <div class="tutorial-actions">
+      <button class="btn btn-secondary" id="resetProgress">Reset Progress</button>
+      <a href="home.html" class="btn">Back to Home</a>
     </div>
   </main>
+  
   <footer>
     <p>© 2025 Legend of Zelda - Indy Griffitts & Tyler Burke</p>
   </footer>

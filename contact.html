@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Legend of Zelda Portal</title>
+  <link rel="stylesheet" href="css/contact.css">
+  <script src="js/contact.js" type="module"></script>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>Contact the Heroes</h1>
+      <p>Send us a message from across Hyrule</p>
+    </div>
+    
+    <!-- DROPDOWN FOR MOBILE -->
+    <nav class="main-nav">
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="subpage.html">Tutorial</a></li>
+        <li><a href="games.html">Games Database</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="contact-container">
+      <div class="contact-info">
+        <h2>Get in Touch</h2>
+        <p>Have questions about our tutorials? Need help with a dungeon? Want to share your Zelda experiences? We'd love to hear from you!</p>
+        
+        <div class="info-items">
+          <div class="info-item">
+            <span class="info-icon">📧</span>
+            <div>
+              <h3>Email</h3>
+              <p>heroes@hyrule-portal.com</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">🏰</span>
+            <div>
+              <h3>Location</h3>
+              <p>Hyrule Castle Town</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">⏰</span>
+            <div>
+              <h3>Response Time</h3>
+              <p>Within 24 hours</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="contact-form-container">
+        <h2>Send a Message</h2>
+        <form id="contactForm" class="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Your Name *</label>
+            <input 
+              type="text" 
+              id="name" 
+              name="name" 
+              required 
+              placeholder="Enter your name"
+              aria-required="true"
+            >
+            <span class="error-text" id="nameError"></span>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              required 
+              placeholder="your.email@example.com"
+              aria-required="true"
+            >
+            <span class="error-text" id="emailError"></span>
+          </div>
+          
+          <div class="form-group">
+            <label for="subject">Subject *</label>
+            <select id="subject" name="subject" required aria-required="true">
+              <option value="">Select a topic...</option>
+              <option value="tutorial">Tutorial Help</option>
+              <option value="bug">Report a Bug</option>
+              <option value="suggestion">Suggestion</option>
+              <option value="general">General Inquiry</option>
+            </select>
+            <span class="error-text" id="subjectError"></span>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Your Message *</label>
+            <textarea 
+              id="message" 
+              name="message" 
+              required 
+              rows="6" 
+              placeholder="Tell us what's on your mind..."
+              aria-required="true"
+            ></textarea>
+            <span class="error-text" id="messageError"></span>
+          </div>
+          
+          <div class="form-group checkbox-group">
+            <label>
+              <input type="checkbox" id="newsletter" name="newsletter">
+              <span>Subscribe to our newsletter for Zelda tips and updates</span>
+            </label>
+          </div>
+          
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+        
+        <div id="successMessage" class="success-message" style="display: none;">
+          <h3>✓ Message Sent!</h3>
+          <p>Thank you for contacting us. We'll get back to you soon, Hero!</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>© 2025 Legend of Zelda - Indy Griffitts & Tyler Burke</p>
+  </footer>
+</body>
+</html>

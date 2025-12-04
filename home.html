@@ -5,18 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Legend of Zelda Portal</title>
   <link rel="stylesheet" href="css/home.css">
-  <script src="js/home.js" defer></script>
-
+  <script src="js/home.js" type="module"></script>
 </head>
 <body>
-  <!-- Glowing Triforce Background -->
+  <!-- TRIFORCE BACKGROUND -->
   <div class="triforce-bg">
     <div></div>
   </div>
+  
   <header>
-    <h1>The Legend of Zelda Portal</h1>
-    <p>Discover secrets, puzzles, and adventures from Hyrule</p>
+    <div class="header-content">
+      <h1>The Legend of Zelda Portal</h1>
+      <p>Discover secrets, puzzles, and adventures from Hyrule</p>
+    </div>
+    
+    <!-- DROP DOWN FOR MOBILE VIEWERS -->
+    <nav class="main-nav">
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="home.html" class="active">Home</a></li>
+        <li><a href="subpage.html">Tutorial</a></li>
+        <li><a href="games.html">Games Database</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
+  
   <main>
     <section class="intro">
       <h2>Welcome, Hero of Time</h2>
@@ -25,9 +43,30 @@
         Learn how to conquer ancient puzzles, unlock hidden treasures, 
         and master the art of courage.
       </p>
-      <a href="subpage.html" class="btn">Enter the Tutorial</a>
+      <div class="cta-buttons">
+        <a href="subpage.html" class="btn btn-primary">Enter the Tutorial</a>
+        <a href="games.html" class="btn btn-secondary">Explore Games</a>
+      </div>
     </section>
-  </main>
+    
+    <section class="features">
+      <div class="feature-card">
+        <div class="feature-icon">🗡️</div>
+        <h3>Master Dungeons</h3>
+        <p>Step-by-step guides for every dungeon in Twilight Princess</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📚</div>
+        <h3>Game Database</h3>
+        <p>Explore the complete Zelda game collection with detailed information</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💬</div>
+        <h3>Get in Touch</h3>
+        <p>Have questions? Reach out to our team of Hyrule experts</p>
+      </div>
+    </section>
+  </main>  
   <footer>
     <p>© 2025 Legend of Zelda - Indy Griffitts & Tyler Burke</p>
   </footer>

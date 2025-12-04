@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zelda Games Database</title>
+  <link rel="stylesheet" href="css/games.css">
+  <script src="js/games.js" type="module"></script>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>Zelda Games Database</h1>
+      <p>Explore the legendary series</p>
+    </div>
+    
+    <!-- DROPDOWN FOR MOBILE -->
+    <nav class="main-nav">
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="subpage.html">Tutorial</a></li>
+        <li><a href="games.html" class="active">Games Database</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="filters">
+      <h2>Filter Games</h2>
+      <div class="filter-controls">
+        <select id="consoleFilter" class="filter-select">
+          <option value="all">All Consoles</option>
+          <option value="NES">NES</option>
+          <option value="SNES">SNES</option>
+          <option value="N64">Nintendo 64</option>
+          <option value="GameCube">GameCube</option>
+          <option value="Wii">Wii</option>
+          <option value="Switch">Switch</option>
+        </select>
+        <button id="sortBtn" class="btn btn-secondary">Sort by Year</button>
+      </div>
+    </section>
+    
+    <section class="games-container">
+      <div id="loadingSpinner" class="loading">
+        <div class="spinner"></div>
+        <p>Loading games from Hyrule's archives...</p>
+      </div>
+      <div id="gamesGrid" class="games-grid"></div>
+      <div id="errorMessage" class="error-message" style="display: none;">
+        <p>Failed to load games. Please try again later.</p>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>© 2025 Legend of Zelda - Indy Griffitts & Tyler Burke</p>
+  </footer>
+</body>
+</html>

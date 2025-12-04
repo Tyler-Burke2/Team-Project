@@ -1,0 +1,81 @@
+{
+  "games": [
+    {
+      "id": 1,
+      "name": "The Legend of Zelda",
+      "console": "NES",
+      "year": 1986,
+      "description": "The original adventure that started it all. Guide Link through Hyrule to rescue Princess Zelda."
+    },
+    {
+      "id": 2,
+      "name": "Zelda II: The Adventure of Link",
+      "console": "NES",
+      "year": 1987,
+      "description": "A unique side-scrolling adventure with RPG elements."
+    },
+    {
+      "id": 3,
+      "name": "A Link to the Past",
+      "console": "SNES",
+      "year": 1991,
+      "description": "A masterpiece featuring the Light and Dark Worlds of Hyrule."
+    },
+    {
+      "id": 4,
+      "name": "Link's Awakening",
+      "console": "Switch",
+      "year": 2019,
+      "description": "A charming remake of the Game Boy classic with beautiful art."
+    },
+    {
+      "id": 5,
+      "name": "Ocarina of Time",
+      "console": "N64",
+      "year": 1998,
+      "description": "The revolutionary 3D adventure that defined a generation."
+    },
+    {
+      "id": 6,
+      "name": "Majora's Mask",
+      "console": "N64",
+      "year": 2000,
+      "description": "A darker tale with time-traveling mechanics and memorable masks."
+    },
+    {
+      "id": 7,
+      "name": "The Wind Waker",
+      "console": "GameCube",
+      "year": 2002,
+      "description": "Sail the Great Sea in this cel-shaded oceanic adventure."
+    },
+    {
+      "id": 8,
+      "name": "Twilight Princess",
+      "console": "Wii",
+      "year": 2006,
+      "description": "A darker, more mature Zelda featuring wolf transformation abilities."
+    },
+    {
+      "id": 9,
+      "name": "Skyward Sword",
+      "console": "Wii",
+      "year": 2011,
+      "description": "The origin story of the Master Sword with motion controls."
+    },
+    {
+      "id": 10,
+      "name": "Breath of the Wild",
+      "console": "Switch",
+      "year": 2017,
+      "description": "Open-world masterpiece that redefined the series."
+    },
+    {
+      "id": 11,
+      "name": "Tears of the Kingdom",
+      "console": "Switch",
+      "year": 2023,
+      "description": "The epic sequel with crafting and sky exploration."
+    }
+  ]
+}
