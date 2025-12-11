@@ -11,10 +11,10 @@
   <header>
     <div class="header-content">
       <h1>Snowpeak Ruins Tutorial</h1>
-      <p>Step-by-step guide for The Legend of Zelda: Twilight Princess</p>
+      <p>Box Puzzle Walkthrough - The Legend of Zelda: Twilight Princess</p>
     </div>
     
-    <!-- MOBILE DROP DOWN MENU -->
+    <!-- DROP DOWN FOR MOBILE VIEWERS -->
     <nav class="main-nav">
       <button class="nav-toggle" aria-label="Toggle navigation">
         <span></span>
@@ -31,59 +31,158 @@
   </header>
   
   <main>
-    <!-- COOL PROGRESS BAR -->
+    <!-- Visible URL Parameter \/\/\/  -->
+    <div class="url-indicator">
+      <p>📍 Current URL: <code id="currentUrl">subpage.html</code></p>
+      <button class="btn-share" id="shareBtn">📋 Share This Step</button>
+    </div>
+    
+    <!-- Progress indicator -->
     <div class="progress-container">
       <div class="progress-bar">
         <div class="progress-fill" id="progressFill"></div>
       </div>
-      <p class="progress-text">Step <span id="currentStepNum">1</span> of 10</p>
+      <p class="progress-text">Step <span id="currentStepNum">1</span> of 17</p>
     </div>
     
     <div class="tutorial-container">
       <button class="nav-btn" id="prevBtn" aria-label="Previous step"><</button>
       <div class="steps-wrapper">
+        
+        <!-- Step 1 -->
         <div class="step" data-step="1">
-          <h2>Step 1:</h2>
-          <p></p>
+          <h2>Step 1: Enter the Room</h2>
+          <p>Enter through the door directly in front of the yeti. You'll see several boxes and floor buttons in this puzzle room.</p>
+          <img src="https://via.placeholder.com/400x250/2f5e3a/e5d283?text=Step+1:+Enter+Room" alt="Enter puzzle room" class="step-image">
         </div>
+        
+        <!-- Step 2 -->
         <div class="step" data-step="2">
-          <h2>Step 2:</h2>
-          <p></p>
+          <h2>Step 2: Move First Box</h2>
+          <p>Push the box to the left of the floor button toward the right. This will begin positioning the boxes for the puzzle.</p>
+          <img src="https://via.placeholder.com/400x250/2f5e3a/e5d283?text=Step+2:+Push+Box+Right" alt="Push first box right" class="step-image">
         </div>
+        
+        <!-- Step 3 -->
         <div class="step" data-step="3">
-          <h2>Step 3:</h2>
-          <p>
-          </p>
+          <h2>Step 3: Move Second Box</h2>
+          <p>Push the second box in the right corner to the left (which will hit the block of ice). This creates space for the next moves.</p>
+          <img src="https://via.placeholder.com/400x250/2f5e3a/e5d283?text=Step+3:+Push+to+Ice" alt="Push second box to ice" class="step-image">
         </div>
+        
+        <!-- Step 4 -->
         <div class="step" data-step="4">
-          <h2>Step 4:</h2>
-          <p></p>
+          <h2>Step 4: Position Box 2</h2>
+          <p>Push Box 2 towards the floor button. You're getting closer to activating the first button.</p>
+          <img src="https://via.placeholder.com/400x250/2f5e3a/e5d283?text=Step+4:+Toward+Button" alt="Push box 2 toward button" class="step-image">
         </div>
+        
+        <!-- Step 5 -->
         <div class="step" data-step="5">
-          <h2>Step 5:</h2>
-          <p>
-          </p>
+          <h2>Step 5: Align the Boxes</h2>
+          <p>Push Box 2 towards Box 1 so that they are up against each other. They need to be aligned for the next step.</p>
+          <img src="https://via.placeholder.com/400x250/2f5e3a/e5d283?text=Step+5:+Align+Boxes" alt="Align boxes together" class="step-image">
         </div>
+        
+        <!-- Step 6 -->
         <div class="step" data-step="6">
-          <h2>Step 6:</h2>
-          <p></p>
+          <h2>Step 6: Activate First Button</h2>
+          <p>Push Box 2 onto the button. Success! The first floor button is now activated.</p>
+          <img src="https://via.placeholder.com/400x250/2f5e3a/e5d283?text=Step+6:+Button+Activated!" alt="Box on button" class="step-image">
         </div>
-        <div class="step" data-step="7">
-          <h2>Step 7:</h2>
-          <p></p>
+        
+        <!-- Part 2 Warning -->
+        <div class="step part-2-warning" data-step="7">
+          <div class="warning-box">
+            <h2>⚠️ Part 2: Ball and Chain Required</h2>
+            <p class="warning-text">
+              <strong>STOP HERE if you don't have the Ball and Chain weapon yet!</strong>
+            </p>
+            <p>You must obtain the Ball and Chain weapon before continuing with Part 2 of this puzzle. The Ball and Chain is needed to break ice blocks.</p>
+            <p>Once you have the weapon, continue to the next step.</p>
+          </div>
+          <img src="https://via.placeholder.com/400x250/2f5e3a/e5d283?text=Ball+and+Chain+Required" alt="Ball and Chain weapon" class="step-image">
         </div>
+        
+        <!-- Step 7 -->
         <div class="step" data-step="8">
-          <h2>Step 8:</h2>
-          <p></p>
+          <h2>Step 7: Break Ice on Floor Button</h2>
+          <p>Use the Ball and Chain to break the ice on the second floor button. Aim carefully and swing!</p>
+          <img src="https://via.placeholder.com/400x250/2f5e3a/e5d283?text=Step+7:+Break+Ice" alt="Break ice on button" class="step-image">
         </div>
+        
+        <!-- Step 8 -->
         <div class="step" data-step="9">
-          <h2>Step 9:</h2>
-          <p></p>
+          <h2>Step 8: Free Third Box</h2>
+          <p>Break the ice on the third box in the bottom left hand corner using the Ball and Chain. Now you can move this box.</p>
+          <img src="https://via.placeholder.com/400x250/2f5e3a/e5d283?text=Step+8:+Free+Box+3" alt="Break ice on box 3" class="step-image">
         </div>
+        
+        <!-- Step 9 -->
         <div class="step" data-step="10">
-          <h2>Step 10:</h2>
-          <p></p>
+          <h2>Step 9: Move Box 3</h2>
+          <p>Push Box 3 toward the other boxes from Part 1. You're bringing all three boxes together now.</p>
+          <img src="https://via.placeholder.com/400x250/2f5e3a/e5d283?text=Step+9:+Push+Box+3" alt="Move box 3 toward others" class="step-image">
         </div>
+        
+        <!-- Step 10 -->
+        <div class="step" data-step="11">
+          <h2>Step 10: Align Box 3</h2>
+          <p>Push Box 3 across so it is up against both boxes. All three boxes should now be touching.</p>
+          <img src="https://via.placeholder.com/400x250/2f5e3a/e5d283?text=Step+10:+Three+Boxes" alt="Three boxes aligned" class="step-image">
+        </div>
+        
+        <!-- Step 11 -->
+        <div class="step" data-step="12">
+          <h2>Step 11: Move Box 1</h2>
+          <p>Push Box 1 straight across to the other side of the room. This creates a new configuration.</p>
+          <img src="https://via.placeholder.com/400x250/2f5e3a/e5d283?text=Step+11:+Box+1+Across" alt="Push box 1 across" class="step-image">
+        </div>
+        
+        <!-- Step 12 -->
+        <div class="step" data-step="13">
+          <h2>Step 12: Position Box 3</h2>
+          <p>Push Box 3 to the left corner where it will be positioned by the doors.</p>
+          <img src="https://via.placeholder.com/400x250/2f5e3a/e5d283?text=Step+12:+Box+3+Corner" alt="Box 3 to corner" class="step-image">
+        </div>
+        
+        <!-- Step 13 -->
+        <div class="step" data-step="14">
+          <h2>Step 13: Reposition Box 1</h2>
+          <p>Push Box 1 to where Box 3 was in the corner by the doors. You're swapping their positions.</p>
+          <img src="https://via.placeholder.com/400x250/2f5e3a/e5d283?text=Step+13:+Swap+Positions" alt="Box 1 to old box 3 spot" class="step-image">
+        </div>
+        
+        <!-- Step 14 -->
+        <div class="step" data-step="15">
+          <h2>Step 14: Move Box 1 to Starting Point</h2>
+          <p>Push Box 1 to where Box 3 originally started. This continues the repositioning sequence.</p>
+          <img src="https://via.placeholder.com/400x250/2f5e3a/e5d283?text=Step+14:+Box+1+Start" alt="Box 1 to box 3 start" class="step-image">
+        </div>
+        
+        <!-- Step 15 -->
+        <div class="step" data-step="16">
+          <h2>Step 15: Push Box 3 Right</h2>
+          <p>Push Box 3 to the right, moving it into position for the final moves.</p>
+          <img src="https://via.placeholder.com/400x250/2f5e3a/e5d283?text=Step+15:+Box+3+Right" alt="Box 3 to the right" class="step-image">
+        </div>
+        
+        <!-- Step 16 -->
+        <div class="step" data-step="17">
+          <h2>Step 16: Align Box 3 with Box 2</h2>
+          <p>Push Box 3 towards Box 2. They should now be touching and properly aligned.</p>
+          <img src="https://via.placeholder.com/400x250/2f5e3a/e5d283?text=Step+16:+Box+3+to+2" alt="Box 3 toward box 2" class="step-image">
+        </div>
+        
+        <!-- Step 17 -->
+        <div class="step" data-step="18">
+          <h2>Step 17: Final Move - Victory!</h2>
+          <p>Push Box 2 towards Box 1. This is the final move!</p>
+          <p class="success-text">🎉 <strong>The door upstairs will unlock!</strong> 🎉</p>
+          <p>Congratulations! You've successfully completed the Snowpeak Ruins box puzzle. Head upstairs to continue your adventure!</p>
+          <img src="https://via.placeholder.com/400x250/2f5e3a/e5d283?text=VICTORY!+Door+Unlocked" alt="Puzzle complete - door unlocked" class="step-image">
+        </div>
+        
       </div>
       <button class="nav-btn" id="nextBtn" aria-label="Next step">></button>
     </div>
@@ -93,6 +192,14 @@
       <a href="home.html" class="btn">Back to Home</a>
     </div>
   </main>
+  
+  <div id="shareModal" class="modal">
+    <div class="modal-content">
+      <h3>✓ Link Copied!</h3>
+      <p>The URL for this step has been copied to your clipboard. Share it with others!</p>
+      <button class="btn btn-primary" id="closeShareModal">Close</button>
+    </div>
+  </div>
   
   <footer>
     <p>© 2025 Legend of Zelda - Indy Griffitts & Tyler Burke</p>

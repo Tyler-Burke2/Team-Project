@@ -11,7 +11,6 @@ body {
   position: relative;
 }
 
-/* TRIFORCE BACKGROUND */
 .triforce-bg {
   position: fixed;
   top: 50%;
@@ -37,7 +36,6 @@ body {
   }
 }
 
-/* Base triangles */
 .triforce-bg::before,
 .triforce-bg::after,
 .triforce-bg div {
@@ -50,25 +48,21 @@ body {
   border-bottom: 86.6px solid rgba(226, 203, 110, 0.4);
 }
 
-/* Top triangle */
 .triforce-bg::before {
   left: -50px;
   top: -86.6px;
 }
 
-/* Bottom left triangle */
 .triforce-bg::after {
   left: -100px;
   top: 0;
 }
 
-/* Bottom right triangle */
 .triforce-bg div {
   left: 0;
   top: 0;
 }
 
-/* HEADER & NAVIGATION */
 header {
   background: linear-gradient(to bottom, #2f5e3a, #1e3c25);
   padding: 1.5rem 2rem;
@@ -89,7 +83,6 @@ header {
   margin: 0.5rem 0 1rem 0;
 }
 
-/* Navigation Styles */
 .main-nav {
   position: relative;
 }
@@ -102,9 +95,6 @@ header {
   border: none;
   cursor: pointer;
   padding: 0.5rem;
-  position: absolute;
-  top: -60px;
-  right: 0;
 }
 
 .nav-toggle span {
@@ -141,7 +131,6 @@ header {
   transform: translateY(-2px);
 }
 
-/* Mobile Navigation */
 @media (max-width: 768px) {
   .nav-toggle {
     display: flex;
@@ -285,6 +274,10 @@ main {
   transition: all 0.3s ease;
   animation: fadeInUp 0.8s ease;
   animation-fill-mode: both;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
 }
 
 .feature-card:nth-child(1) { animation-delay: 0.2s; }
@@ -321,7 +314,6 @@ footer {
   z-index: 1;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .header-content h1 {
     font-size: 1.8rem;

@@ -10,7 +10,6 @@ body {
   overflow-x: hidden;
 }
 
-/* HEADER & NAVIGATION */
 header {
   background: linear-gradient(to bottom, #2f5e3a, #1e3c25);
   padding: 1.5rem 2rem;
@@ -31,7 +30,6 @@ header {
   margin: 0.5rem 0 1rem 0;
 }
 
-/* Navigation Styles */
 .main-nav {
   position: relative;
 }
@@ -44,9 +42,6 @@ header {
   border: none;
   cursor: pointer;
   padding: 0.5rem;
-  position: absolute;
-  top: -60px;
-  right: 0;
 }
 
 .nav-toggle span {
@@ -83,7 +78,6 @@ header {
   transform: translateY(-2px);
 }
 
-/* Mobile Navigation */
 @media (max-width: 768px) {
   .nav-toggle {
     display: flex;
@@ -133,7 +127,6 @@ main {
   width: 100%;
 }
 
-/* Filters Section */
 .filters {
   background-color: rgba(255, 255, 255, 0.05);
   padding: 1.5rem;
@@ -203,7 +196,6 @@ main {
   transform: scale(1.05);
 }
 
-/* Games Grid */
 .games-container {
   min-height: 400px;
   position: relative;
@@ -305,6 +297,116 @@ main {
   font-size: 1.2rem;
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  animation: fadeIn 0.3s ease;
+}
+
+.modal.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content.game-modal {
+  background: linear-gradient(to bottom, #2f5e3a, #1e3c25);
+  padding: 2.5rem;
+  border-radius: 12px;
+  border: 2px solid #c6b64b;
+  box-shadow: 0 0 30px rgba(198, 182, 75, 0.5);
+  max-width: 600px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(198, 182, 75, 0.2);
+  border: 2px solid #c6b64b;
+  color: #e5d283;
+  font-size: 2rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  line-height: 1;
+}
+
+.modal-close:hover {
+  background: rgba(198, 182, 75, 0.4);
+  transform: rotate(90deg);
+}
+
+#modalGameContent h2 {
+  color: #e5d283;
+  margin: 0 0 1rem 0;
+  font-size: 2rem;
+}
+
+#modalGameContent .modal-console {
+  display: inline-block;
+  background: #c6b64b;
+  color: #1e1e1e;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+#modalGameContent .modal-year {
+  color: #d0cdb0;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+#modalGameContent .modal-description {
+  color: #f5f2d0;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+}
+
+#modalGameContent .modal-details {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(198, 182, 75, 0.3);
+  margin-top: 1rem;
+}
+
+#modalGameContent .modal-details p {
+  margin: 0.5rem 0;
+  color: #d0cdb0;
+}
+
 footer {
   background-color: #162b1a;
   padding: 1rem;
@@ -313,7 +415,6 @@ footer {
   margin-top: 2rem;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .header-content h1 {
     font-size: 1.8rem;

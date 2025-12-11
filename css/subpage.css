@@ -10,7 +10,6 @@ body {
   overflow-x: hidden;
 }
 
-/* HEADER & NAVIGATION */
 header {
   background: linear-gradient(to bottom, #2f5e3a, #1e3c25);
   padding: 1.5rem 2rem;
@@ -31,7 +30,6 @@ header {
   margin: 0.5rem 0 1rem 0;
 }
 
-/* Navigation Styles */
 .main-nav {
   position: relative;
 }
@@ -83,7 +81,6 @@ header {
   transform: translateY(-2px);
 }
 
-/* Mobile Navigation */
 @media (max-width: 768px) {
   .nav-toggle {
     display: flex;
@@ -132,10 +129,54 @@ main {
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
-/* Progress Bar */
+.url-indicator {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid #c6b64b;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: 800px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.url-indicator p {
+  margin: 0;
+  color: #e5d283;
+  font-size: 0.9rem;
+}
+
+.url-indicator code {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  color: #f5f2d0;
+  font-family: 'Courier New', monospace;
+}
+
+.btn-share {
+  background: rgba(198, 182, 75, 0.2);
+  border: 2px solid #c6b64b;
+  color: #e5d283;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.btn-share:hover {
+  background: rgba(198, 182, 75, 0.3);
+  transform: scale(1.05);
+}
+
 .progress-container {
   width: 100%;
   max-width: 800px;
@@ -165,7 +206,6 @@ main {
   font-weight: 600;
 }
 
-/* Tutorial Container */
 .tutorial-container {
   display: flex;
   align-items: center;
@@ -232,6 +272,38 @@ main {
   margin-top: 1rem;
 }
 
+.part-2-warning {
+  background: rgba(255, 165, 0, 0.1) !important;
+  border-color: #ffa500 !important;
+}
+
+.warning-box {
+  background: rgba(255, 140, 0, 0.2);
+  border: 2px solid #ff8c00;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.warning-box h2 {
+  color: #ffa500;
+  margin: 0 0 1rem 0;
+}
+
+.warning-text {
+  color: #ffb84d;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.success-text {
+  color: #4caf50;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 1rem 0;
+}
+
 .nav-btn {
   background: #c6b64b;
   border: none;
@@ -256,7 +328,6 @@ main {
   cursor: not-allowed;
 }
 
-/* Tutorial Actions */
 .tutorial-actions {
   display: flex;
   gap: 1rem;
@@ -302,7 +373,59 @@ footer {
   color: #b9b38a;
 }
 
-/* Responsive Design */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  animation: fadeIn 0.3s ease;
+}
+
+.modal.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: linear-gradient(to bottom, #2f5e3a, #1e3c25);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 2px solid #c6b64b;
+  box-shadow: 0 0 30px rgba(198, 182, 75, 0.5);
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-content h3 {
+  color: #e5d283;
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.modal-content p {
+  color: #d0cdb0;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
 @media (max-width: 768px) {
   .header-content h1 {
     font-size: 1.8rem;
@@ -325,5 +448,14 @@ footer {
   
   .steps-wrapper {
     max-width: 100%;
+  }
+  
+  .url-indicator {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .btn-share {
+    width: 100%;
   }
 }

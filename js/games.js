@@ -1,8 +1,6 @@
-// Import modules
 import { initNavigation } from './modules/navigation.js';
 import { fetchGamesData } from './modules/dataFetcher.js';
 
-// Initialize navigation
 initNavigation();
 
 const gamesGrid = document.getElementById('gamesGrid');
@@ -10,18 +8,19 @@ const loadingSpinner = document.getElementById('loadingSpinner');
 const errorMessage = document.getElementById('errorMessage');
 const consoleFilter = document.getElementById('consoleFilter');
 const sortBtn = document.getElementById('sortBtn');
+const gameModal = document.getElementById('gameModal');
+const modalGameContent = document.getElementById('modalGameContent');
+const closeModalBtn = document.getElementById('closeModal');
 
 let allGames = [];
 let sortedByYear = false;
 
-// Fetch and display games
 async function loadGames() {
   try {
     loadingSpinner.style.display = 'flex';
     errorMessage.style.display = 'none';
     gamesGrid.innerHTML = '';
     
-    // Fetch games data
     allGames = await fetchGamesData();
     
     displayGames(allGames);
@@ -33,7 +32,6 @@ async function loadGames() {
   }
 }
 
-// Display games in grid
 function displayGames(games) {
   gamesGrid.innerHTML = '';
   
@@ -54,11 +52,48 @@ function displayGames(games) {
       <p class="game-description">${game.description}</p>
     `;
     
+    gameCard.addEventListener('click', () => openGameModal(game));
+    
     gamesGrid.appendChild(gameCard);
   });
 }
 
-// Filter games by console
+function openGameModal(game) {
+  modalGameContent.innerHTML = `
+    <h2>${game.name}</h2>
+    <span class="modal-console">${game.console}</span>
+    <p class="modal-year">📅 Released: ${game.year}</p>
+    <p class="modal-description">${game.description}</p>
+    <div class="modal-details">
+      <p><strong>Platform:</strong> ${game.console}</p>
+      <p><strong>Year:</strong> ${game.year}</p>
+      <p><strong>Series:</strong> The Legend of Zelda</p>
+      <p><strong>Developer:</strong> Nintendo</p>
+    </div>
+  `;
+  
+  gameModal.classList.add('show');
+}
+
+function closeModal() {
+  gameModal.classList.remove('show');
+}
+
+closeModalBtn.addEventListener('click', closeModal);
+
+gameModal.addEventListener('click', (e) => {
+  if (e.target === gameModal) {
+    closeModal();
+  }
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && gameModal.classList.contains('show')) {
+    closeModal();
+  }
+});
+
+// FILTER BY CONSOLE
 function filterGames() {
   const selectedConsole = consoleFilter.value;
   
@@ -71,13 +106,12 @@ function filterGames() {
   displayGames(filteredGames);
 }
 
-// Sort games by year
+// SORT BY YEAR
 function toggleSort() {
   sortedByYear = !sortedByYear;
   
   let gamesToDisplay = [...allGames];
   
-  // Apply filter if one is selected
   const selectedConsole = consoleFilter.value;
   if (selectedConsole !== 'all') {
     gamesToDisplay = gamesToDisplay.filter(game => game.console === selectedConsole);
@@ -94,9 +128,7 @@ function toggleSort() {
   displayGames(gamesToDisplay);
 }
 
-// Event listeners
 consoleFilter.addEventListener('change', filterGames);
 sortBtn.addEventListener('click', toggleSort);
 
-// Load games on page load
 loadGames();

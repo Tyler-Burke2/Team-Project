@@ -10,7 +10,6 @@ body {
   overflow-x: hidden;
 }
 
-/* HEADER & NAVIGATION */
 header {
   background: linear-gradient(to bottom, #2f5e3a, #1e3c25);
   padding: 1.5rem 2rem;
@@ -31,7 +30,6 @@ header {
   margin: 0.5rem 0 1rem 0;
 }
 
-/* Navigation Styles */
 .main-nav {
   position: relative;
 }
@@ -44,9 +42,6 @@ header {
   border: none;
   cursor: pointer;
   padding: 0.5rem;
-  position: absolute;
-  top: -60px;
-  right: 0;
 }
 
 .nav-toggle span {
@@ -83,7 +78,6 @@ header {
   transform: translateY(-2px);
 }
 
-/* Mobile Navigation */
 @media (max-width: 768px) {
   .nav-toggle {
     display: flex;
@@ -133,7 +127,6 @@ main {
   justify-content: center;
 }
 
-/* Contact Container */
 .contact-container {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
@@ -191,7 +184,6 @@ main {
   color: #d0cdb0;
 }
 
-/* Contact Form */
 .contact-form-container {
   background-color: rgba(255, 255, 255, 0.05);
   padding: 2rem;
@@ -229,13 +221,24 @@ main {
 .form-group select,
 .form-group textarea {
   padding: 0.8rem;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(30, 60, 37, 0.6);
   color: #f5f2d0;
-  border: 2px solid rgba(198, 182, 75, 0.4);
+  border: 2px solid rgba(198, 182, 75, 0.6);
   border-radius: 8px;
   font-family: 'Cinzel', serif;
   font-size: 1rem;
   transition: all 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(245, 242, 208, 0.5);
+}
+
+.form-group select option {
+  background: #1e3c25;
+  color: #f5f2d0;
+  padding: 0.5rem;
 }
 
 .form-group input:focus,
@@ -311,7 +314,6 @@ main {
   transform: translateY(0);
 }
 
-/* Success Message */
 .success-message {
   text-align: center;
   padding: 2rem;
@@ -349,7 +351,6 @@ footer {
   color: #b9b38a;
 }
 
-/* Responsive Design */
 @media (max-width: 968px) {
   .contact-container {
     grid-template-columns: 1fr;
