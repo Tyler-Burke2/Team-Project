@@ -10,6 +10,7 @@ body {
   overflow-x: hidden;
 }
 
+/* HEADER & NAVIGATION */
 header {
   background: linear-gradient(to bottom, #2f5e3a, #1e3c25);
   padding: 1.5rem 2rem;
@@ -30,6 +31,7 @@ header {
   margin: 0.5rem 0 1rem 0;
 }
 
+/* Navigation Styles */
 .main-nav {
   position: relative;
 }
@@ -42,9 +44,6 @@ header {
   border: none;
   cursor: pointer;
   padding: 0.5rem;
-  position: absolute;
-  top: -60px;
-  right: 0;
 }
 
 .nav-toggle span {
@@ -81,6 +80,7 @@ header {
   transform: translateY(-2px);
 }
 
+/* Mobile Navigation */
 @media (max-width: 768px) {
   .nav-toggle {
     display: flex;
@@ -132,6 +132,7 @@ main {
   gap: 1.5rem;
 }
 
+/* URL Indicator */
 .url-indicator {
   background: rgba(255, 255, 255, 0.05);
   border: 2px solid #c6b64b;
@@ -177,6 +178,7 @@ main {
   transform: scale(1.05);
 }
 
+/* Progress Bar */
 .progress-container {
   width: 100%;
   max-width: 800px;
@@ -206,6 +208,7 @@ main {
   font-weight: 600;
 }
 
+/* Tutorial Container */
 .tutorial-container {
   display: flex;
   align-items: center;
@@ -220,6 +223,37 @@ main {
   overflow: hidden;
   max-width: 600px;
   width: 100%;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 3rem;
+  min-height: 400px;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(198, 182, 75, 0.3);
+  border-top: 4px solid #c6b64b;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.error-message {
+  text-align: center;
+  padding: 3rem;
+  color: #ff6b6b;
 }
 
 .step {
@@ -272,6 +306,7 @@ main {
   margin-top: 1rem;
 }
 
+/* Part 2 Warning Step */
 .part-2-warning {
   background: rgba(255, 165, 0, 0.1) !important;
   border-color: #ffa500 !important;
@@ -328,6 +363,7 @@ main {
   cursor: not-allowed;
 }
 
+/* Tutorial Actions */
 .tutorial-actions {
   display: flex;
   gap: 1rem;
@@ -373,6 +409,7 @@ footer {
   color: #b9b38a;
 }
 
+/* Modal Styles */
 .modal {
   display: none;
   position: fixed;
@@ -426,6 +463,7 @@ footer {
   line-height: 1.6;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
   .header-content h1 {
     font-size: 1.8rem;

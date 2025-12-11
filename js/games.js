@@ -1,6 +1,8 @@
+// Import modules
 import { initNavigation } from './modules/navigation.js';
 import { fetchGamesData } from './modules/dataFetcher.js';
 
+// Initialize navigation
 initNavigation();
 
 const gamesGrid = document.getElementById('gamesGrid');
@@ -15,12 +17,14 @@ const closeModalBtn = document.getElementById('closeModal');
 let allGames = [];
 let sortedByYear = false;
 
+// Fetch and display games
 async function loadGames() {
   try {
     loadingSpinner.style.display = 'flex';
     errorMessage.style.display = 'none';
     gamesGrid.innerHTML = '';
     
+    // Fetch games data
     allGames = await fetchGamesData();
     
     displayGames(allGames);
@@ -32,6 +36,7 @@ async function loadGames() {
   }
 }
 
+// Display games in grid
 function displayGames(games) {
   gamesGrid.innerHTML = '';
   
@@ -52,12 +57,14 @@ function displayGames(games) {
       <p class="game-description">${game.description}</p>
     `;
     
+    // Add click handler to open modal
     gameCard.addEventListener('click', () => openGameModal(game));
     
     gamesGrid.appendChild(gameCard);
   });
 }
 
+// Open modal with game details
 function openGameModal(game) {
   modalGameContent.innerHTML = `
     <h2>${game.name}</h2>
@@ -75,6 +82,7 @@ function openGameModal(game) {
   gameModal.classList.add('show');
 }
 
+// Close modal
 function closeModal() {
   gameModal.classList.remove('show');
 }
@@ -87,13 +95,14 @@ gameModal.addEventListener('click', (e) => {
   }
 });
 
+// Close modal with Escape key
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && gameModal.classList.contains('show')) {
     closeModal();
   }
 });
 
-// FILTER BY CONSOLE
+// Filter games by console
 function filterGames() {
   const selectedConsole = consoleFilter.value;
   
@@ -106,29 +115,40 @@ function filterGames() {
   displayGames(filteredGames);
 }
 
-// SORT BY YEAR
+// Sort games by year or name
 function toggleSort() {
   sortedByYear = !sortedByYear;
   
   let gamesToDisplay = [...allGames];
   
+  // Apply filter if one is selected
   const selectedConsole = consoleFilter.value;
   if (selectedConsole !== 'all') {
     gamesToDisplay = gamesToDisplay.filter(game => game.console === selectedConsole);
   }
   
   if (sortedByYear) {
-    gamesToDisplay.sort((a, b) => a.year - b.year);
+    // Sort by year (oldest to newest)
+    gamesToDisplay.sort((a, b) => {
+      const yearA = parseInt(a.year);
+      const yearB = parseInt(b.year);
+      return yearA - yearB;
+    });
     sortBtn.textContent = 'Sort by Name';
   } else {
-    gamesToDisplay.sort((a, b) => a.name.localeCompare(b.name));
+    // Sort alphabetically by name
+    gamesToDisplay.sort((a, b) => {
+      return a.name.localeCompare(b.name);
+    });
     sortBtn.textContent = 'Sort by Year';
   }
   
   displayGames(gamesToDisplay);
 }
 
+// Event listeners
 consoleFilter.addEventListener('change', filterGames);
 sortBtn.addEventListener('click', toggleSort);
 
+// Load games on page load
 loadGames();
