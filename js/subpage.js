@@ -70,7 +70,7 @@ function renderSteps() {
           <p>You must obtain the Ball and Chain weapon before continuing with Part 2 of this puzzle. The Ball and Chain is needed to break ice blocks.</p>
           <p>Once you have the weapon, continue to the next step.</p>
         </div>
-        <img src="https://via.placeholder.com/400x250/2f5e3a/e5d283?text=Ball+and+Chain+Required" alt="Ball and Chain weapon" class="step-image">
+        <img src="images/ball.png" alt="Ball and Chain weapon" class="step-image">
       `;
       stepsWrapper.appendChild(warningDiv);
     }

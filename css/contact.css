@@ -121,7 +121,7 @@ header {
 
 main {
   flex: 1;
-  padding: 2rem;
+  padding: 2rem 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -134,6 +134,7 @@ main {
   max-width: 1200px;
   width: 100%;
   align-items: start;
+  box-sizing: border-box;
 }
 
 .contact-info {
@@ -143,6 +144,7 @@ main {
   border: 2px solid #c6b64b;
   box-shadow: 0 0 20px rgba(198, 182, 75, 0.3);
   text-align: left;
+  box-sizing: border-box;
 }
 
 .contact-info h2 {
@@ -191,6 +193,7 @@ main {
   border: 2px solid #c6b64b;
   box-shadow: 0 0 20px rgba(198, 182, 75, 0.3);
   text-align: left;
+  box-sizing: border-box;
 }
 
 .contact-form-container h2 {
@@ -228,6 +231,8 @@ main {
   font-family: 'Cinzel', serif;
   font-size: 1rem;
   transition: all 0.3s ease;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .form-group input::placeholder,
@@ -283,6 +288,7 @@ main {
   width: 18px;
   height: 18px;
   cursor: pointer;
+  flex-shrink: 0;
 }
 
 .btn {
@@ -295,6 +301,8 @@ main {
   border: none;
   font-family: inherit;
   font-size: 1rem;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 .btn-primary {
@@ -364,11 +372,27 @@ footer {
   }
   
   main {
-    padding: 1rem;
+    padding: 1rem 0.5rem;
   }
   
   .contact-info,
   .contact-form-container {
     padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-content h1 {
+    font-size: 1.5rem;
+  }
+  
+  .contact-info,
+  .contact-form-container {
+    padding: 1.2rem;
+  }
+  
+  .btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
   }
 }

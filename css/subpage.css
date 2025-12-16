@@ -128,7 +128,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  padding: 2rem 1rem;
   gap: 1.5rem;
 }
 
@@ -145,12 +145,14 @@ main {
   max-width: 800px;
   width: 100%;
   flex-wrap: wrap;
+  box-sizing: border-box;
 }
 
 .url-indicator p {
   margin: 0;
   color: #e5d283;
   font-size: 0.9rem;
+  word-break: break-all;
 }
 
 .url-indicator code {
@@ -159,6 +161,7 @@ main {
   border-radius: 4px;
   color: #f5f2d0;
   font-family: 'Courier New', monospace;
+  word-break: break-all;
 }
 
 .btn-share {
@@ -171,6 +174,7 @@ main {
   font-family: inherit;
   font-size: 0.9rem;
   transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
 .btn-share:hover {
@@ -183,6 +187,8 @@ main {
   width: 100%;
   max-width: 800px;
   margin-bottom: 1rem;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 .progress-bar {
@@ -213,9 +219,11 @@ main {
   display: flex;
   align-items: center;
   gap: 1rem;
-  max-width: 90%;
+  max-width: 1000px;
   width: 100%;
   justify-content: center;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 .steps-wrapper {
@@ -223,6 +231,7 @@ main {
   overflow: hidden;
   max-width: 600px;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .loading {
@@ -271,6 +280,9 @@ main {
   justify-content: flex-start;
   gap: 1rem;
   animation: fadeIn 0.5s ease;
+  box-sizing: border-box;
+  overflow: hidden;
+  width: 100%;
 }
 
 .step.active {
@@ -291,11 +303,16 @@ main {
 .step h2 {
   color: #e5d283;
   margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+  text-align: center;
+  word-wrap: break-word;
 }
 
 .step p {
   line-height: 1.8;
-  max-width: 500px;
+  max-width: 100%;
+  word-wrap: break-word;
+  padding: 0 0.5rem;
 }
 
 .step-image {
@@ -318,6 +335,8 @@ main {
   border-radius: 8px;
   padding: 1.5rem;
   margin-bottom: 1rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .warning-box h2 {
@@ -350,6 +369,7 @@ main {
   transition: all 0.3s ease;
   box-shadow: 0 0 15px rgba(198, 182, 75, 0.3);
   flex-shrink: 0;
+  min-width: 50px;
 }
 
 .nav-btn:hover:not(:disabled) {
@@ -369,6 +389,10 @@ main {
   gap: 1rem;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 0 1rem;
+  max-width: 800px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .btn {
@@ -384,6 +408,8 @@ main {
   background: #c6b64b;
   color: #1e1e1e;
   box-shadow: 0 0 15px rgba(198, 182, 75, 0.3);
+  box-sizing: border-box;
+  white-space: nowrap;
 }
 
 .btn:hover {
@@ -426,6 +452,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 1rem;
 }
 
 .modal-content {
@@ -438,6 +465,7 @@ footer {
   width: 90%;
   text-align: center;
   animation: slideDown 0.3s ease;
+  box-sizing: border-box;
 }
 
 @keyframes slideDown {
@@ -469,9 +497,14 @@ footer {
     font-size: 1.8rem;
   }
   
+  main {
+    padding: 1rem 0.5rem;
+  }
+  
   .tutorial-container {
     flex-direction: column;
     max-width: 100%;
+    padding: 0 0.5rem;
   }
   
   .nav-btn {
@@ -481,7 +514,11 @@ footer {
   
   .step {
     min-height: 350px;
-    padding: 1.5rem;
+    padding: 1.5rem 1rem;
+  }
+  
+  .step h2 {
+    font-size: 1.3rem;
   }
   
   .steps-wrapper {
@@ -491,9 +528,49 @@ footer {
   .url-indicator {
     flex-direction: column;
     text-align: center;
+    padding: 0.8rem;
   }
   
   .btn-share {
     width: 100%;
+  }
+  
+  .tutorial-actions {
+    flex-direction: column;
+    padding: 0 0.5rem;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 0.8rem;
+  }
+  
+  .progress-container {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-content h1 {
+    font-size: 1.5rem;
+  }
+  
+  .step {
+    padding: 1rem 0.8rem;
+    min-height: 300px;
+  }
+  
+  .step h2 {
+    font-size: 1.1rem;
+  }
+  
+  .step p {
+    font-size: 0.9rem;
+  }
+  
+  .nav-btn {
+    font-size: 1.2rem;
+    padding: 0.3rem 0.6rem;
+    min-width: 40px;
   }
 }

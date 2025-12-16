@@ -13,42 +13,42 @@
       "stepNumber": 2,
       "title": "Move First Box",
       "description": "Push the box to the left of the floor button toward the right. This will begin positioning the boxes for the puzzle.",
-      "imageUrl": "https://via.placeholder.com/400x250/2f5e3a/e5d283?text=Step+2:+Push+Box+Right",
+      "imageUrl": "images/2.png",
       "imageAlt": "Push first box right"
     },
     {
       "stepNumber": 3,
       "title": "Move Second Box",
       "description": "Push the second box in the right corner to the left (which will hit the block of ice). This creates space for the next moves.",
-      "imageUrl": "https://via.placeholder.com/400x250/2f5e3a/e5d283?text=Step+3:+Push+to+Ice",
+      "imageUrl": "images/3.png",
       "imageAlt": "Push second box to ice"
     },
     {
       "stepNumber": 4,
       "title": "Position Box 2",
       "description": "Push Box 2 towards the floor button. You're getting closer to activating the first button.",
-      "imageUrl": "https://via.placeholder.com/400x250/2f5e3a/e5d283?text=Step+4:+Toward+Button",
+      "imageUrl": "images/4.png",
       "imageAlt": "Push box 2 toward button"
     },
     {
       "stepNumber": 5,
       "title": "Align the Boxes",
       "description": "Push Box 2 towards Box 1 so that they are up against each other. They need to be aligned for the next step.",
-      "imageUrl": "https://via.placeholder.com/400x250/2f5e3a/e5d283?text=Step+5:+Align+Boxes",
+      "imageUrl": "images/5.png",
       "imageAlt": "Align boxes together"
     },
     {
       "stepNumber": 6,
       "title": "Activate First Button",
       "description": "Push Box 2 onto the button. Success! The first floor button is now activated.",
-      "imageUrl": "https://via.placeholder.com/400x250/2f5e3a/e5d283?text=Step+6:+Button+Activated!",
+      "imageUrl": "images/6.png",
       "imageAlt": "Box on button"
     },
     {
       "stepNumber": 7,
       "title": "Break Ice on Floor Button",
       "description": "Use the Ball and Chain to break the ice on the second floor button. Aim carefully and swing!",
-      "imageUrl": "https://via.placeholder.com/400x250/2f5e3a/e5d283?text=Step+7:+Break+Ice",
+      "imageUrl": "images/8.png",
       "imageAlt": "Break ice on button",
       "requiresBallAndChain": true
     },
@@ -56,63 +56,63 @@
       "stepNumber": 8,
       "title": "Free Third Box",
       "description": "Break the ice on the third box in the bottom left hand corner using the Ball and Chain. Now you can move this box.",
-      "imageUrl": "https://via.placeholder.com/400x250/2f5e3a/e5d283?text=Step+8:+Free+Box+3",
+      "imageUrl": "images/ice.png",
       "imageAlt": "Break ice on box 3"
     },
     {
       "stepNumber": 9,
       "title": "Move Box 3",
       "description": "Push Box 3 toward the other boxes from Part 1. You're bringing all three boxes together now.",
-      "imageUrl": "https://via.placeholder.com/400x250/2f5e3a/e5d283?text=Step+9:+Push+Box+3",
+      "imageUrl": "images/8.png",
       "imageAlt": "Move box 3 toward others"
     },
     {
       "stepNumber": 10,
-      "title": "Align Box 3",
-      "description": "Push Box 3 across so it is up against both boxes. All three boxes should now be touching.",
-      "imageUrl": "https://via.placeholder.com/400x250/2f5e3a/e5d283?text=Step+10:+Three+Boxes",
+      "title": "Push Box 2",
+      "description": "Push Box 2 across so it is away from both boxes.",
+      "imageUrl": "images/9.png",
       "imageAlt": "Three boxes aligned"
     },
     {
       "stepNumber": 11,
-      "title": "Move Box 1",
-      "description": "Push Box 1 straight across to the other side of the room. This creates a new configuration.",
-      "imageUrl": "https://via.placeholder.com/400x250/2f5e3a/e5d283?text=Step+11:+Box+1+Across",
+      "title": "Move Box 3",
+      "description": "Push Box 3 towards Box 2 so that they are now touching.",
+      "imageUrl": "images/10.png",
       "imageAlt": "Push box 1 across"
     },
     {
       "stepNumber": 12,
       "title": "Position Box 3",
-      "description": "Push Box 3 to the left corner where it will be positioned by the doors.",
-      "imageUrl": "https://via.placeholder.com/400x250/2f5e3a/e5d283?text=Step+12:+Box+3+Corner",
+      "description": "Push Box 3 towards Box 2.",
+      "imageUrl": "images/11.png",
       "imageAlt": "Box 3 to corner"
     },
     {
       "stepNumber": 13,
       "title": "Reposition Box 1",
       "description": "Push Box 1 to where Box 3 was in the corner by the doors. You're swapping their positions.",
-      "imageUrl": "https://via.placeholder.com/400x250/2f5e3a/e5d283?text=Step+13:+Swap+Positions",
+      "imageUrl": "images/12.png",
       "imageAlt": "Box 1 to old box 3 spot"
     },
     {
       "stepNumber": 14,
       "title": "Move Box 1 to Starting Point",
       "description": "Push Box 1 to where Box 3 originally started. This continues the repositioning sequence.",
-      "imageUrl": "https://via.placeholder.com/400x250/2f5e3a/e5d283?text=Step+14:+Box+1+Start",
+      "imageUrl": "images/13.png",
       "imageAlt": "Box 1 to box 3 start"
     },
     {
       "stepNumber": 15,
       "title": "Push Box 3 Right",
       "description": "Push Box 3 to the right, moving it into position for the final moves.",
-      "imageUrl": "https://via.placeholder.com/400x250/2f5e3a/e5d283?text=Step+15:+Box+3+Right",
+      "imageUrl": "images/14.png",
       "imageAlt": "Box 3 to the right"
     },
     {
       "stepNumber": 16,
       "title": "Align Box 3 with Box 2",
       "description": "Push Box 3 towards Box 2. They should now be touching and properly aligned.",
-      "imageUrl": "https://via.placeholder.com/400x250/2f5e3a/e5d283?text=Step+16:+Box+3+to+2",
+      "imageUrl": "images/15.png",
       "imageAlt": "Box 3 toward box 2"
     },
     {
@@ -121,7 +121,7 @@
       "description": "Push Box 2 towards Box 1. This is the final move!",
       "successMessage": "The door upstairs will unlock!",
       "congratulations": "Congratulations! You've successfully completed the Snowpeak Ruins box puzzle. Head upstairs to continue your adventure!",
-      "imageUrl": "https://via.placeholder.com/400x250/2f5e3a/e5d283?text=VICTORY!+Door+Unlocked",
+      "imageUrl": "images/door.png",
       "imageAlt": "Puzzle complete - door unlocked"
     }
   ]
