@@ -6,7 +6,7 @@
       "stepNumber": 1,
       "title": "Enter the Room",
       "description": "Enter through the door directly in front of the yeti. You'll see several boxes and floor buttons in this puzzle room.",
-      "imageUrl": "https://via.placeholder.com/400x250/2f5e3a/e5d283?text=Step+1:+Enter+Room",
+      "imageUrl": "images/first.png",
       "imageAlt": "Enter puzzle room"
     },
     {
